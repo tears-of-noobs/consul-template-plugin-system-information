@@ -15,7 +15,7 @@ func main() {
 
 Usage:
     consul-template-plugin-system-information hostname
-    consul-template-plugin-system-info time [<format>]
+    consul-template-plugin-system-information time [<format>]
 
 Options:
     <format>  Format of return time value. Available formats
