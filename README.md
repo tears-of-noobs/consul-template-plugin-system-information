@@ -24,26 +24,26 @@ pacman -U *.tar.xz
 ### Get current hostname
 ```sh
 {{ $system := "consul-template-plugin-system-information" }}
-{{ $hostname := $system "hostname" }}
+{{ $hostname := plugin $system "hostname" }}
 ```
 
 ### Get first IP address from network interface
 get IPv4 address
 ```sh
 {{ $system := "consul-template-plugin-system-information" }}
-{{ $ipv4 := $system "ipv4 eth0" }}
+{{ $ipv4 := plugin $system "ipv4" "eth0" }}
 ```
 get IPv6 address
 ```sh
 {{ $system := "consul-template-plugin-system-information" }}
-{{ $ipv6 := $system "ipv6 eth0" }}
+{{ $ipv6 := plugin $system "ipv6" "eth0" }}
 ```
 
 ### Get current time in preferred format
 
 ```sh
 {{ $system := "consul-template-plugin-system-information" }}
-{{ $time := $system "time" "rfc3339"}}
+{{ $time := plugin $system "time" "rfc3339"}}
 {{ $time }}
 ```
 will be rendered as 
