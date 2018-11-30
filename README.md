@@ -27,6 +27,18 @@ pacman -U *.tar.xz
 {{ $hostname := $system "hostname" }}
 ```
 
+### Get first IP address from network interface
+get IPv4 address
+```sh
+{{ $system := "consul-template-plugin-system-information" }}
+{{ $ipv4 := $system "ipv4 eth0" }}
+```
+get IPv6 address
+```sh
+{{ $system := "consul-template-plugin-system-information" }}
+{{ $ipv6 := $system "ipv6 eth0" }}
+```
+
 ### Get current time in preferred format
 
 ```sh
