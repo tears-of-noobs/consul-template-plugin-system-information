@@ -8,11 +8,11 @@ import (
 func TestObtainSystemTime(t *testing.T) {
 	availableFormats := map[string]*regexp.Regexp{
 		"ansic": regexp.MustCompile(
-			`\w{2,3} \w{3} \_?\d{1,2} \d{2}:\d{2}:\d{2} \d{4}`,
+			`\w{2,3} \w{3} [\s]?\d{1,2} \d{2}:\d{2}:\d{2} \d{4}`,
 		),
 
 		"unix_date": regexp.MustCompile(
-			`\w{2,3} \w{3} \_?\d{1,2} \d{2}:\d{2}:\d{2} [\-|\+]?\d{2} \d{4}`,
+			`\w{2,3} \w{3} [\s]?\d{1,2} \d{2}:\d{2}:\d{2} [\-|\+]?\d{2} \d{4}`,
 		),
 
 		"ruby_date": regexp.MustCompile(
